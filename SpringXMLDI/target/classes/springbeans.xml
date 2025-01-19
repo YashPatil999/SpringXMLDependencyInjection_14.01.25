@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="product1" class="com.entity.Product">
+		<property name="productId" value="101" />
+		<property name="productName" value="Laptop" />
+		<property name="price" value="75000.00" />
+		<property name="category" value="Electronics" />
+	</bean>
+
+	<bean id="product2" class="com.entity.Product">
+		<property name="productId" value="102" />
+		<property name="productName" value="Smartphone" />
+		<property name="price" value="30000.00" />
+		<property name="category" value="Electronics" />
+	</bean>
+
+	<bean id="product3" class="com.entity.Product">
+		<property name="productId" value="103" />
+		<property name="productName" value="Headphones" />
+		<property name="price" value="1500.00" />
+		<property name="category" value="Accessories" />
+	</bean>
+
+	<bean id="order" class="com.entity.Order">
+		<property name="orderId" value="5001" />
+		<property name="customerName" value="Rohit Sharma" />
+		<property name="orderDate" value="2025-01-15" />
+		<property name="products" ref="product1"></property>
+		<property name="totalAmount" value="106500.00" />
+	</bean>
+
+</beans>
